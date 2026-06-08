@@ -1,0 +1,303 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header nav .container div div h5 {
+  color: #eb5f2d;
+}
+
+.navbar-brand {
+  color: #eb5f2d;
+}
+
+#navbarNav {
+  background-color: #ffffff;
+}
+
+.nav-bar .nav-item .nav-link {
+  color: #eb5f2d;
+}
+
+.btn-orange {
+  background-color: #eb5f2d;
+  color: #ffffff;
+  border: 2px solid #eb5f2d;
+  transition: all 0.3s ease;
+}
+.btn-orange:hover {
+  background-color: #eb5f2d;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.btn-outline-orange {
+  background-color: transparent;
+  color: #eb5f2d;
+  border: 2px solid #eb5f2d;
+  transition: all 0.3s ease;
+}
+.btn-outline-orange:hover {
+  background-color: #eb5f2d;
+  color: #ffffff;
+}
+
+.hero {
+  padding-top: 100px;
+  padding-bottom: 60px;
+  background-color: #fdf8f5;
+}
+.hero .subtitulo-hero {
+  display: block;
+  margin-top: 10px;
+}
+@media (min-width: 992px) {
+  .hero {
+    padding-top: 150px;
+    padding-bottom: 80px;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  .hero p {
+    font-size: 1.25rem;
+  }
+}
+
+.about {
+  background-color: #fdf8f5;
+  padding: 25px 0;
+}
+
+.text-orange {
+  color: #eb5f2d;
+}
+
+.reservation {
+  background-color: #fdf8f5;
+  padding: 50px 0;
+}
+@media (min-width: 768px) {
+  .reservation .row {
+    align-items: center;
+  }
+}
+.reservation .reservation-box {
+  background-color: #fdf8f5;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .reservation .reservation-box {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+.reservation input, .reservation select {
+  border: 1px solid #eb5f2d;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+.reservation .form-group {
+  margin-bottom: 15px;
+}
+.reservation label {
+  font-weight: bold;
+  color: #eb5f2d;
+  display: block;
+  margin-bottom: 5px;
+}
+@media (min-width: 768px) {
+  .reservation .form-row {
+    display: flex;
+    gap: 20px;
+  }
+  .reservation .form-row .form-group {
+    flex: 1;
+  }
+}
+.reservation .button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+.reservation .reservation-image {
+  display: none;
+}
+@media (min-width: 768px) {
+  .reservation .reservation-image {
+    display: block;
+    height: auto;
+  }
+  .reservation .reservation-image img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+  }
+}
+
+.main-footer {
+  background-color: #1a1a1a;
+  color: #fcf8f2;
+  padding: 50px 0;
+  text-align: center;
+}
+.main-footer h3 {
+  color: #eb5f2d;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+.main-footer p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.chef-section {
+  background-color: #fdf8f5;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+@media (min-width: 768px) {
+  .chef-section {
+    padding-top: 140px;
+    padding-bottom: 80px;
+  }
+}
+.chef-section .chef-image-container {
+  position: relative;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.chef-section .chef-image-container .chef-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+.chef-section .chef-image-container .chef-experience-badge {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #eb5f2d;
+  color: #ffffff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+.chef-section .chef-image-container .chef-experience-badge h3 {
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: bold;
+}
+.chef-section .chef-image-container .chef-experience-badge p {
+  font-size: 0.75rem;
+  margin: 0;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .chef-section .chef-image-container {
+    margin-bottom: 0;
+  }
+}
+.chef-section h2 {
+  color: #eb5f2d;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+.chef-section .chef-subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #555;
+}
+.chef-section .chef-bio {
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+.chef-section .chef-awards {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 25px;
+}
+.chef-section .chef-awards li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.chef-section .chef-awards li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #eb5f2d;
+  font-size: 1.5rem;
+  top: -4px;
+}
+.chef-section blockquote {
+  border-left: 4px solid #eb5f2d;
+  padding-left: 20px;
+  margin: 30px 0;
+  font-style: italic;
+  color: #444;
+}
+.chef-section blockquote footer {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 5px;
+  font-style: normal;
+}
+.chef-section .chef-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.chef-section .chef-gallery {
+  margin-top: 50px;
+}
+.chef-section .chef-gallery .gallery-card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.chef-section .chef-gallery .gallery-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+  z-index: 5;
+}
+.chef-section .chef-gallery .gallery-card .gallery-img-container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+.chef-section .chef-gallery .gallery-card .gallery-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.chef-section .chef-gallery .gallery-card .gallery-body {
+  padding: 30px 20px 20px 20px;
+}
+.chef-section .chef-gallery .gallery-card .gallery-body h3 {
+  font-size: 1.25rem;
+  color: #eb5f2d;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+.chef-section .chef-gallery .gallery-card .gallery-body p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/*# sourceMappingURL=styles.css.map */

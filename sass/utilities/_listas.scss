@@ -1,0 +1,7 @@
+// 1. Lista de colores de la paleta de Carmine
+// Posiciones: 1 = Naranja base, 2 = Blanco puro, 3 = Crema de fondo, 4 = Oscuro Footer, 5 = Crema claro texto
+$colores-carmine: #eb5f2d, #ffffff, #fdf8f5, #1a1a1a, #fcf8f2;
+
+// 2. Lista de paddings estructurales que usás en tus secciones
+// Posiciones: 1 = Botones/Inputs (10px), 2 = Cajas (20px), 3 = Secciones mobile (25px), 4 = Footer/Reserva (50px)
+$paddings-estructura: 10px, 20px, 25px, 50px;

@@ -1,0 +1,24 @@
+@use '_variables.scss' as *;
+
+// 1. Mixin de medidas
+@mixin medidas($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+// 2. Mixin para Flexbox
+@mixin flex-custom($direction: row, $justify: flex-start, $align: stretch, $gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+// 3. Mixin para Botones
+@mixin estilo-boton($bg, $texto, $borde: none) {
+    background-color: $bg;
+    color: $texto;
+    border: $borde;
+    transition: $transicion-suave;
+}

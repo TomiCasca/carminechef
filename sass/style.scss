@@ -1,0 +1,373 @@
+//comentario en sass
+//** Otro comentario*//
+
+//USE
+@use 'utilities/_variables.scss' as *;
+@use 'utilities/_listas.scss' as *;
+@use 'utilities/_mixin.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+    font-family: $fuente-principal;
+}
+
+// --- HEADER & NAVIGATION ---
+
+header {
+    nav {
+        .container {
+            div div h5 {
+                color: $color-principal;
+            }
+        }
+    }
+}
+
+.navbar-brand {
+    color: $color-principal;
+}
+
+#navbarNav {
+    background-color: $color-blanco;
+}
+
+.nav-bar {
+    .nav-item {
+        .nav-link {
+            color: $color-principal;
+        }
+    }
+}
+
+// --- MAIN: HERO SECTION & BUTTONS ---
+
+// Botón Naranja Principal (Estilo sólido)
+.btn-orange {
+    @include estilo-boton($color-principal, $color-blanco, 2px solid $color-principal);
+    &:hover {
+        background-color: $color-principal;
+        color: $color-blanco;
+        opacity: 0.8;
+    }
+}
+
+// Botón Naranja Contorneado (Outline)
+.btn-outline-orange {
+    @include estilo-boton(transparent, $color-principal, 2px solid $color-principal);
+    
+    &:hover {
+        background-color: $color-principal;
+        color: $color-blanco;
+    }
+}
+
+// Sección Hero Principal
+.hero {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    background-color: $color-secundario;
+    .subtitulo-hero {
+        display: block;
+        margin-top: 10px;
+    }
+
+    // La Media Query de Desktop acá adentro
+    @media (min-width: 992px) {
+        padding-top: 150px;
+        padding-bottom: 80px;
+
+        h1 {
+            font-size: $tamano-titulo-hero;
+        }
+
+        p {
+            font-size: $tamano-subtitulo-hero;
+        }
+    }
+}
+// --- MAIN: ABOUT SECTION ---
+
+.about {
+    background-color: $color-secundario;
+    padding: 25px 0;
+}
+
+.text-orange {
+    color: $color-principal;
+}
+
+
+// --- MAIN: RESERVATION SECTION ---
+
+.reservation {
+    background-color: $color-secundario;
+    padding: 50px 0;
+
+    // Ajuste de alineación para Desktop que re-centra la foto
+    .row {
+        @media (min-width: 768px) {
+            align-items: center;
+        }
+    }
+
+    .reservation-box {
+        background-color: $color-secundario;
+        padding: 20px;
+
+        @media (min-width: 768px) {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+
+    // Inputs y Selects del formulario anidados
+    input, select {
+        border: 1px solid $color-principal;
+        border-radius: $borde-radio-base;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-weight: bold;
+        color: $color-principal;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    // Manejo de las filas del formulario en Desktop
+    .form-row {
+        @media (min-width: 768px) {
+            display: flex;
+            gap: 20px;
+
+            .form-group {
+                flex: 1;
+            }
+        }
+    }
+
+    .button-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    // La imagen de la reserva con sus Media Queries anidadas
+    .reservation-image {
+        display: none; 
+
+        @media (min-width: 768px) {
+            display: block;
+            height: auto; 
+
+            img {
+                @include medidas(100%, auto);
+                max-height: 400px;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+// --- FOOTER SECTION ---
+
+.main-footer {
+    background-color: $color-oscuro-footer;
+    color: $color-texto-footer;
+    padding: 50px 0;
+    text-align: center;
+    h3 {
+        color: $color-principal;
+        font-size: $tamano-titulo-footer;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        line-height: 1.6;
+    }
+}
+
+
+// --- PÁGINA DE EQUIPO: SECCIÓN CHEF & GALERÍA COMPLETA ---
+
+.chef-section {
+    background-color: $color-secundario; // Fondo crema base
+    padding-top: 100px; 
+    padding-bottom: 60px;
+
+    @media (min-width: 768px) {
+        padding-top: 140px; // Más aire en pantallas grandes
+        padding-bottom: 80px;
+    }
+
+    // --- 1. Contenedor de la Imagen Principal del Chef (¡Acá recupera sus dimensiones!) ---
+    .chef-image-container {
+        position: relative; // Padre relativo para que el cartel flote adentro
+        margin-bottom: 30px;
+        border-radius: $borde-radio-base;
+        overflow: hidden; 
+
+        .chef-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+
+        // El cartelito naranja "20+ Años de Excelencia"
+        .chef-experience-badge {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: $color-principal; // Naranja Carmine
+            color: $color-blanco;
+            padding: 15px;
+            text-align: center;
+            border-radius: $borde-radio-base;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+            h3 {
+                font-size: 1.8rem;
+                margin: 0;
+                font-weight: bold;
+            }
+
+            p {
+                font-size: 0.75rem;
+                margin: 0;
+                letter-spacing: 1px;
+                font-weight: 500;
+            }
+        }
+
+        @media (min-width: 768px) {
+            margin-bottom: 0; // En desktop no necesita el margen de abajo
+        }
+    }
+
+    // --- 2. Bloque de Textos del Chef ---
+    h2 {
+        color: $color-principal;
+        font-size: 2rem;
+        margin-bottom: 5px;
+    }
+
+    .chef-subtitle {
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+        color: #555; 
+    }
+
+    .chef-bio {
+        line-height: 1.7;
+        margin-bottom: 25px;
+    }
+
+    .chef-awards {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 25px;
+
+        li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            font-weight: 500;
+
+            // Puntito naranja personalizado antes de cada premio
+            &::before {
+                content: "•";
+                position: absolute;
+                left: 0;
+                color: $color-principal;
+                font-size: 1.5rem;
+                top: -4px;
+            }
+        }
+    }
+
+    blockquote {
+        border-left: 4px solid $color-principal;
+        padding-left: 20px;
+        margin: 30px 0;
+        font-style: italic;
+        color: #444;
+
+        footer {
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 5px;
+            font-style: normal;
+        }
+    }
+
+    // Contenedor para alinear los dos botones
+    .chef-actions {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap; 
+        margin-top: 30px;
+    }
+
+    // --- 3. DISEÑO DE CARDS A MANO (La galería de abajo con tamaño fijo y shadow) ---
+// --- 3. DISEÑO DE CARDS CORREGIDO (Solo esta zona) ---
+    .chef-gallery {
+        margin-top: 50px;
+
+        .gallery-card {
+            position: relative; // Base para el control de capas
+            background-color: $color-blanco;
+            border-radius: $borde-radio-base;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); // Sombra base sutil
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            // Efecto al pasar el ratón
+            &:hover {
+                transform: translateY(-8px);
+                // 💡 SOLUCIÓN SOMBRA: Le damos más oscuridad, radio y dispersión para que se note el contraste
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18); 
+                z-index: 5; // 🔥 CLAVE: Obliga a la tarjeta a subirse a una capa superior para que la sombra no se corte con nada
+            }
+
+            .gallery-img-container {
+                width: 100%;
+                height: 250px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            // El espacio para los textos de tus platos
+            .gallery-body {
+                // 💡 SOLUCIÓN ESPACIADO: Subimos el padding superior a 30px para empujar el texto lejos de la foto
+                padding: 30px 20px 20px 20px; 
+
+                h3 {
+                    font-size: 1.25rem;
+                    color: $color-principal;
+                    margin-top: 0;
+                    margin-bottom: 12px; // Más aire entre el título y el párrafo de abajo
+                    font-weight: bold;
+                }
+
+                p {
+                    font-size: 0.95rem;
+                    color: #666;
+                    margin-bottom: 0;
+                    line-height: 1.6; // Un poco más de interlineado para que sea más legible
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+// _variables.scss
+@use '_listas.scss' as *; // Importamos las listas para poder usarlas acá
+
+// --- PALETA DE COLORES SEMÁNTICA ---
+$color-principal: nth($colores-carmine, 1);     // #eb5f2d (Naranja Carmine)
+$color-secundario: nth($colores-carmine, 3);    // #fdf8f5 (Crema de fondo)
+$color-blanco: nth($colores-carmine, 2);        // #ffffff
+$color-oscuro-footer: nth($colores-carmine, 4); // #1a1a1a
+$color-texto-footer: nth($colores-carmine, 5);  // #fcf8f2
+
+// --- FUENTES Y TIPOGRAFÍA ---
+$fuente-principal: 'Roboto', sans-serif;
+$tamano-titulo-hero: 3.5rem;
+$tamano-subtitulo-hero: 1.25rem;
+$tamano-titulo-footer: 1.4rem;
+
+// --- ESTRUCTURA Y COMPONENTES ---
+$borde-radio-base: 5px;
+$transicion-suave: all 0.3s ease;
