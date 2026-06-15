@@ -458,3 +458,156 @@ header {
         }
     }
 }
+
+// --- PÁGINA DE RESERVAS ---
+
+.reservation-section {
+    background-color: #f8f9fa;
+    padding-top: 120px; 
+    padding-bottom: 80px;
+
+    @media (min-width: 768px) {
+        padding-top: 150px; 
+    }
+
+    // --- 1. BLOQUE DEL FORMULARIO (Izquierda) ---
+    .form-container {
+        border-radius: 16px; // Bordes redondeados más suaves y modernos
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05); // Sombrita muy sutil de fondo
+    }
+
+    // Estilización personalizada de los campos de texto y selectores
+    .form-control, .form-select {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        background-color: #fcfcfc;
+        font-size: 0.95rem;
+        transition: all 0.3s ease; // Transición suave para el foco
+
+        // 💡 UX PRO: Cuando el cliente hace clic para escribir, el campo se ilumina en naranja
+        &:focus {
+            border-color: $color-principal; 
+            background-color: $color-blanco;
+            box-shadow: 0 0 0 0.25rem rgba($color-principal, 0.15); // Halo naranja sutil
+            outline: none;
+        }
+
+        &::placeholder {
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+    }
+
+    textarea.form-control {
+        resize: none; 
+    }
+
+    // --- 2. BLOQUE DE INFORMACIÓN (Derecha) ---
+    .reservation-info-wrapper {
+        
+        // Contenedor de la foto del salón
+        .info-image {
+            height: 280px;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        // Tarjeta blanca con los datos de contacto
+        .info-details {
+            border-radius: 16px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+
+            .info-item {
+                h5 {
+                    font-size: 0.85rem;
+                    letter-spacing: 1px;
+                    font-weight: 700;
+                }
+
+                p {
+                    color: #555;
+                    font-size: 0.95rem;
+                }
+            }
+        }
+    }
+
+    // --- 3. ADAPTACIÓN PARA CELULARES (Mobile-First) ---
+    @media (max-width: 991px) {
+        padding-top: 100px;
+        .form-container, .info-details {
+            padding: 30px !important; 
+        }
+
+        .reservation-info-wrapper {
+            margin-top: 30px; 
+            
+            .info-image {
+                height: 220px; 
+            }
+        }
+    }
+}
+
+// --- PÁGINA DE GALERÍA DE IMÁGENES ---
+
+.gallery-section {
+    background-color: $color-secundario;
+    padding-top: 120px;
+    padding-bottom: 80px;
+
+    @media (min-width: 768px) {
+        padding-top: 150px; 
+    }
+
+    h2 {
+        color: $color-principal; 
+    }
+
+    // --- CONTENEDOR DE LA TARJETA ---
+    .gallery-card {
+        background-color: $color-blanco;
+        border-radius: $borde-radio-base;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                    box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        .gallery-img-container {
+            width: 100%;
+            height: 280px; 
+            background-color: #f0f0f0;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
+            }
+        }
+        &:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12); 
+            img {
+                transform: scale(1.05); 
+            }
+        }
+    }
+
+    // --- ADAPTACIÓN PARA DISPOSITIVOS MÓVILES ---
+    @media (max-width: 767px) {
+        padding-top: 100px;
+
+        .gallery-card {
+            .gallery-img-container {
+                height: 230px; 
+            }
+        }
+    }
+}
