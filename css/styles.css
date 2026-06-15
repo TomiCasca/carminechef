@@ -300,4 +300,72 @@ header nav .container div div h5 {
   line-height: 1.6;
 }
 
+.location-section {
+  background-color: #fdf8f5;
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+.location-section h2 {
+  color: #eb5f2d;
+  font-family: inherit;
+}
+.location-section .map-card {
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+.location-section .map-card iframe {
+  display: block;
+}
+.location-section .transport-info {
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+.location-section .transport-info h3 {
+  font-size: 1.3rem;
+  color: #eb5f2d;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.location-section .transport-info p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+.location-section .info-card {
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.location-section .info-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.location-section .info-card .info-card-body {
+  padding: 25px;
+}
+.location-section .info-card .info-card-body h4 {
+  font-size: 1.15rem;
+  color: #eb5f2d;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.location-section .info-card .info-card-body p {
+  margin-bottom: 0;
+  color: #444;
+  line-height: 1.6;
+}
+.location-section .location-actions {
+  margin-top: auto;
+}
+.location-section .location-actions .btn {
+  padding: 12px;
+  font-weight: 500;
+}
+
 /*# sourceMappingURL=styles.css.map */

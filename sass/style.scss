@@ -371,3 +371,90 @@ header {
         }
     }
 }
+
+// --- PÁGINA DE UBICACIÓN Y CONTACTO ---
+
+.location-section {
+    background-color: $color-secundario; // Fondo crema de la app
+    padding-top: 120px; // Espacio para que el navbar fijo no tape el título
+    padding-bottom: 80px;
+
+    h2 {
+        color: $color-principal;
+        font-family: inherit;
+    }
+
+    // Contenedor del Mapa de Google
+    .map-card {
+        border-radius: $borde-radio-base;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        
+        iframe {
+            display: block;
+        }
+    }
+
+    // Tarjeta gris/blanca de transporte abajo del mapa
+    .transport-info {
+        background-color: $color-blanco;
+        border-radius: $borde-radio-base;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+
+        h3 {
+            font-size: 1.3rem;
+            color: $color-principal;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            color: #555;
+        }
+    }
+
+    // --- LAS TARJETAS DE INFORMACIÓN (Derecha) ---
+    .info-card {
+        background-color: $color-blanco;
+        border-radius: $borde-radio-base;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-card-body {
+            padding: 25px;
+
+            h4 {
+                font-size: 1.15rem;
+                color: $color-principal;
+                font-weight: bold;
+                margin-top: 0;
+                margin-bottom: 12px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            p {
+                margin-bottom: 0;
+                color: #444;
+                line-height: 1.6;
+            }
+        }
+    }
+
+    // Contenedor de los botones inferiores
+    .location-actions {
+        margin-top: auto; // Empuja los botones al fondo en pantallas grandes
+        
+        .btn {
+            padding: 12px;
+            font-weight: 500;
+        }
+    }
+}
